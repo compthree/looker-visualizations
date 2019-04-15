@@ -1,0 +1,53 @@
+{
+  "name": "c3-looker-visualizations",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "main": "demo/index.html",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch --progress",
+    "lint": "tslint --project tsconfig.json --format stylish 'src/**/*.ts'",
+    "lint-fix": "tslint --fix --project tsconfig.json  --format stylish 'src/**/*.ts'",
+    "test": "mocha",
+    "deploy": "aws --profile=c3 s3 ls && npm run build && aws --profile=c3 s3 sync dist/ s3://c3-looker/dist --acl public-read"
+  },
+  "author": "",
+  "private": true,
+  "devDependencies": {
+    "@types/jquery": "^3.3.2",
+    "css-loader": "^0.28.11",
+    "d3": "^4.8.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.11.0",
+    "mocha": "^3.2.0",
+    "pivottable": "^2.20.0",
+    "subtotal-multiple-aggregates": "4mile/subtotal-multiple-aggregates",
+    "to-string-loader": "^1.1.5",
+    "ts-loader": "3.2.0",
+    "tslint": "5.8.0",
+    "tslint-config-standard": "7.0.0",
+    "typescript": "2.6.2",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7"
+  },
+  "dependencies": {
+    "@types/d3": "^5.0.0",
+    "@types/d3-sankey": "^0.7.2",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "d3-sankey": "^0.7.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-image-lightbox": "^5.1.0",
+    "react-responsive-carousel": "^3.1.47"
+  }
+}

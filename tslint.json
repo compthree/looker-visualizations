@@ -1,0 +1,27 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-standard"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-namespace": [
+      true,
+      "allow-declarations"
+    ],
+    "prefer-const": [
+      true,
+      {
+        "destructuring": "all"
+      }
+    ],
+    "no-reference": true,
+    "promise-function-async": true,
+    "await-promise": true,
+    "no-inferred-empty-object-type": true,
+    "space-before-function-paren": false,
+    "strict-type-predicates": true,
+    "return-undefined": true
+  },
+  "rulesDirectory": []
+}
