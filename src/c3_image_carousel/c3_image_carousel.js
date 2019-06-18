@@ -10,18 +10,6 @@ looker.plugins.visualizations.add({
   // form within the admin/visualizations page of Looker
   id: "c3_image_carousel",
   label: "C3 Image Carousel",
-  options: {
-    font_size: {
-      type: "string",
-      label: "Font Size",
-      values: [
-        {"Large": "large"},
-        {"Small": "small"}
-      ],
-      display: "radio",
-      default: "large"
-    }
-  },
   // Set up the initial state of the visualization
   create: function(element, config) {
     // Insert a <style> tag with some styles we'll use later.
