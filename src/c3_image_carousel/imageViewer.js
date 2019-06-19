@@ -12,7 +12,7 @@ const isUrlCheck = (strToCheck) => {
 }
 
 const isBase64StringCheck = (strToCheck) => {
-  if (strToCheck.length > 150 && B64REGEX.test(strToCheck)) {
+  if (strToCheck && strToCheck.length > 150 && B64REGEX.test(strToCheck)) {
     try {
         return btoa(atob(strToCheck)) == strToCheck;
     } catch (err) {
@@ -98,7 +98,7 @@ export default class ImageViewer extends React.Component {
     // stop if no valid image data column found
     if (!this.state.imageColData.name) {
       return (
-        <div>Image Data Column Not Found</div>
+        <div>Please select at least one field with an image url or a base64 encoded image.</div>
       );
     }
 
