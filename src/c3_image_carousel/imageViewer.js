@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { SAMPLE_IMAGES } from './constants';
 
-const URLREGEX = new RegExp("((http|https)(:\/\/))?([a-zA-Z0-9]+[.]{1}){2}[a-zA-Z0-9]+(\/{1}[a-zA-Z0-9]+)*\/?", "igm");
+const URLREGEX = new RegExp("(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)", "igm");
 const B64REGEX = new RegExp("^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$", "igm");
 
 const DOTS_THRESHOLD = 15;
