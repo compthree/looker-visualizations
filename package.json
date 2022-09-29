@@ -21,7 +21,7 @@
   "devDependencies": {
     "@types/jquery": "^3.3.2",
     "css-loader": "^0.28.11",
-    "d3": "^4.8.0",
+    "d3": "^7.6.1",
     "jquery": "^3.3.1",
     "jsdom": "^11.11.0",
     "mocha": "^3.2.0",
